@@ -6,17 +6,16 @@ function setup() {
 function draw() {
   // put drawing code here
   background(0)
-  push()
-  fill(255 ,80)
+  
+  fill(100,0, 255 ,100)
   for (let i=0; i<1000; i++){
-  triangle(i,i,i*2,i*3, i*mouseX, i*mouseY)
+  triangle(i,i,i*2,i*3, i*1000, i*100)
 }
-pop()
-push()
-  fill(255, 70)
-  for (let j=0; j<500; j++){
-  rect(j, j, j*3, j*7, j*mouseX, j*mouseY)
+
+  fill(0,255,0, 70)
+  for (let j=0; j<1500; j++){
+  rect(j, j, j*3, j*7, j*100, j*10)
 
   }
-  pop()
+
 }
