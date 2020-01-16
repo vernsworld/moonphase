@@ -7,12 +7,8 @@ function draw() {
   // put drawing code here
   background(0)
   
-  fill(100,0, 255 ,100)
-  for (let i=0; i<1000; i++){
-  triangle(i,i,i*2,i*3, i*1000, i*100)
-}
 
-  fill(0,255,0, 70)
+  fill(0, 255, 0, 70)
   for (let j=0; j<1500; j++){
   rect(j, j, j*3, j*7, j*100, j*10)
 
