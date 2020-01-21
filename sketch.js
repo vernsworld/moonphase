@@ -1,7 +1,7 @@
 function setup() {
   // put setup code here
   frameRate(10);
-  createCanvas(1400, 900);
+  createCanvas(displayWidth, displayHeight);
 
   background(0);
 }
