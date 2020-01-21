@@ -33,7 +33,7 @@ stroke(0, 50);
   fill(223,255,0, 50);
   stroke(255,50)
   quad(mouseX, mouseY, 86, 10, 69, 63, 15, 76);
-    quad(mouseX+40, mouseY+50, 86, 20, 69, 63, 30, 76);
+    quad(mouseX+41, mouseY+50, 86, 20, 69, 63, 30, 76);
           quad(mouseX-41, mouseY-50, 86, 20, 69, 63, 30, 76);
 
 }
