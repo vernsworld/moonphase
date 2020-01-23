@@ -24,6 +24,12 @@ pop();
 function draw() {
   // put drawing code here
  // background(0)
+//chartreuse triangles
+  fill(223,255,0, 50);
+  stroke(255,50)
+  quad(mouseX, mouseY, 86, 10, 69, 63, 15, 76);
+    quad(mouseX+41, mouseY+50, 86, 20, 69, 63, 30, 76);
+          quad(mouseX-41, mouseY-50, 86, 20, 69, 63, 30, 76);
 
 //psycho rectangle cone
 stroke(0, 50);
@@ -31,12 +37,7 @@ stroke(0, 50);
   for (let j=0; j<1000; j++){
     rect(j, j, j, j, j*10, j*2);
   }
-//chartreuse triangles
-  fill(223,255,0, 50);
-  stroke(255,50)
-  quad(mouseX, mouseY, 86, 10, 69, 63, 15, 76);
-    quad(mouseX+41, mouseY+50, 86, 20, 69, 63, 30, 76);
-          quad(mouseX-41, mouseY-50, 86, 20, 69, 63, 30, 76);
+
 
 }
 
