@@ -1,16 +1,10 @@
 function setup() {
   // put setup code here
-  frameRate(10);
+  //frameRate(25);
   createCanvas(displayWidth, displayHeight);
 
   background(0);
-}
-
-
-
-function draw() {
-  // put drawing code here
- // background(0)
+//background will be different if you refresh page
 push();
 translate(width/2, height/2);
 beginShape();
@@ -23,13 +17,21 @@ for(var i = 0; i < 1000; i++) {
 }
 endShape();
 pop();
+}
 
+
+
+function draw() {
+  // put drawing code here
+ // background(0)
+
+//psycho rectangle cone
 stroke(0, 50);
   fill(255);
   for (let j=0; j<1000; j++){
     rect(j, j, j, j, j*10, j*2);
   }
-
+//chartreuse triangles
   fill(223,255,0, 50);
   stroke(255,50)
   quad(mouseX, mouseY, 86, 10, 69, 63, 15, 76);
