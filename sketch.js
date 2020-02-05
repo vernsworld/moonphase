@@ -10,8 +10,8 @@ function draw() {
   frames++
     background(50);
 noCursor();
-    drawMoon(35, 50, frames%30, 100);
-     drawMoon(35, 50, frames%15, 200);
+    drawMoon(35, 50, 40, 100);
+     drawMoon(35, 50, 40, 200);
    
 }
 
