@@ -1,16 +1,18 @@
 let detailY;
+
 function setup() {
   createCanvas(windowWidth, windowHeight, WEBGL);
-  detailY = createSlider(0, 30, 30);
-  
+
+  //slider vibes
+  detailY = createSlider(0, 16, 30);
   detailY.position(10, height + 5);
-  detailY.style('width', '80px');
+  detailY.style('width', 'windowWidth');
 
 }
 
 function draw() {
-  //background(0);
-
+  noCursor();
+  //return of the psycho background vibes from my first sketch
   push();
   translate(width/2, height/2);
   beginShape();
@@ -23,14 +25,19 @@ function draw() {
   }
   endShape();
   pop();
-
+  
+  //draw the "earth" aka that psycho torus triangle vibe
   rotateY(millis() / 500);
   drawEarth();  
+
+  //draw moon one -- translating over to another location for extra fun
   push();
   rotateX(millis() / 2000);
   translate(width/2, height/3);
   drawMoon(100, 400, detailY.value());
   pop();
+
+  //draw moon two -- translating over to another location for extra fun
   push();
   rotateX(millis() / 500);
   translate(width/4, height/2);
@@ -52,5 +59,5 @@ function drawMoon(x, y, phase){
 function drawEarth(){
   fill(255, 60);
   rotateY(millis() / 1000);
-  torus(mouseX, mouseY/5, 3, 12);
+  torus(mouseX/3, mouseY/5, 3, 12);
 }
