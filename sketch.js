@@ -4,7 +4,7 @@ function setup() {
   createCanvas(windowWidth, windowHeight, WEBGL);
 
   //slider vibes
-  detailY = createSlider(0, 16, 30);
+  detailY = createSlider(0, 15, 30, 1);
   detailY.position(10, height + 5);
   detailY.style('width', 'windowWidth');
 
@@ -41,12 +41,15 @@ function draw() {
   //draw moon two -- translating over to another location for extra fun
   push();
   rotateX(millis() / 3000);
-  translate(width/4, height/2);
-  drawMoon(90, 60, detailY.value());
+  translate(width, height);
+  drawMoon(100, 200, detailY.value());
   pop();
 }
 
 function drawMoon(x, y, phase){
+
+  //phase will be the slider, scroll bar goes from 1 to 
+
   let dirX = (mouseX / width - 0.5) * 2;
   let dirY = (mouseY / height - 0.5) * 2;
   directionalLight(155, 155, 242, -dirX, -dirY, -1);
@@ -67,6 +70,7 @@ function drawEarth(){
   strokeWeight(.75);
   fill(200, 60);
   rotateY(millis() / 1000);
+  rotateX(millis() / 6000);
   ambientMaterial(1000);
-  torus(mouseX*-1, mouseY/-5, 3, 12);
+  torus((mouseX/-1)+1, (mouseY/15)+1, 3, 5);
 }
