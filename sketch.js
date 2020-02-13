@@ -33,7 +33,8 @@ function draw() {
 
   //draw moon one -- translating over to another location for extra fun
   push();
-  rotateX(millis() / 6000);
+  rotateX(millis() / 300);
+  rotateY(millis() / 2000);
   translate(width/2, height/3);
   drawMoon(100, 400, detailY.value());
   pop();
@@ -41,7 +42,8 @@ function draw() {
   //draw moon two -- translating over to another location for extra fun
   push();
   rotateX(millis() / 3000);
-  translate(width, height);
+  rotateZ(millis() / 6000);
+  translate(width, height/2);
   drawMoon(100, 200, detailY.value());
   pop();
 }
@@ -50,8 +52,8 @@ function drawMoon(x, y, phase){
 
   //phase will be the slider, scroll bar goes from 1 to 
 
-  let dirX = (mouseX / width - 0.5) * 2;
-  let dirY = (mouseY / height - 0.5) * 2;
+  let dirX = (mouseX / width - 0.5) * .5;
+  let dirY = (mouseY / height - 0.5) * .5;
   directionalLight(155, 155, 242, -dirX, -dirY, -1);
   directionalLight(0, 0, 255, dirX, dirY, -0);
   directionalLight(255, 255, 255, 10, 10, -1);
@@ -69,8 +71,9 @@ function drawEarth(){
   stroke(30, 255, 30, .6);
   strokeWeight(.75);
   fill(200, 60);
-  rotateY(millis() / 1000);
+  rotateY(millis() / 600);
   rotateX(millis() / 6000);
+  rotateZ(millis() * 500);
   ambientMaterial(1000);
-  torus((mouseX/-1)+1, (mouseY/15)+1, 3, 5);
+  torus((mouseX/-11)/2, (mouseY/2)/3, 2, 3);
 }
