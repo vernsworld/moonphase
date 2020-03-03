@@ -5,10 +5,7 @@ function setup() {
   createCanvas(windowWidth, windowHeight, WEBGL);
   frameRate(fr); // Attempt to refresh at starting FPS
 
-  //slider vibes
-  detailY = createSlider(0, 15, 30, 1);
-  detailY.position(10, height + 5);
-  detailY.style('width', 'windowWidth');
+  
 
 }
 
@@ -39,7 +36,7 @@ function draw() {
   rotateX(millis() / 300);
   rotateY(millis() / 2000);
   translate(width/2, height/3);
-  drawMoon(100, 400, detailY.value());
+  drawMoon(100, 400, 3);
   pop();
 
   //draw moon two -- translating over to another location for extra fun
@@ -47,7 +44,7 @@ function draw() {
   rotateX(millis() / 3000);
   rotateZ(millis() / 6000);
   translate(width, height/2);
-  drawMoon(100, 200, detailY.value());
+  drawMoon(100, 200, 7);
   pop();
 }
 
@@ -78,5 +75,5 @@ function drawEarth(){
   rotateX(millis() / 6000);
   rotateZ(millis() / 500);
   ambientMaterial(1000);
-  torus((mouseX)/5, (mouseY)/7, 7, 10);
+  torus((mouseX)/5, (mouseY/10)/7, 7, 10);
 }
