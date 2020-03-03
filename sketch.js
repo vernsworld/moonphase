@@ -1,7 +1,9 @@
 let detailY;
+let fr = 15; //starting FPS
 
 function setup() {
   createCanvas(windowWidth, windowHeight, WEBGL);
+  frameRate(fr); // Attempt to refresh at starting FPS
 
   //slider vibes
   detailY = createSlider(0, 15, 30, 1);
@@ -12,6 +14,7 @@ function setup() {
 
 function draw() {
   noCursor();
+  //background(255, 20);
   //return of the psycho background vibes from my first sketch
   push();
   translate(width/2, height/2);
@@ -66,14 +69,14 @@ function drawMoon(x, y, phase){
 }
 
 function drawEarth(){
-  ambientLight(30, 30, 255, .05);
-  pointLight(155, 155, 242, mouseY*-1, mouseX*-1, 100);
+  ambientLight(30, 30, 255, .02);
+  pointLight(255, 155, 242, mouseY*-1, mouseX*-1, 100);
   stroke(30, 255, 30, .6);
   strokeWeight(.75);
-  fill(200, 60);
+  fill(255, 60);
   rotateY(millis() / 600);
   rotateX(millis() / 6000);
-  rotateZ(millis() * 500);
+  rotateZ(millis() / 500);
   ambientMaterial(1000);
-  torus((mouseX/-11)/2, (mouseY/2)/3, 2, 3);
+  torus((mouseX)/5, (mouseY)/7, 7, 10);
 }

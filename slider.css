@@ -3,7 +3,7 @@ background-color: rgba(30, 30, 255, .7);
   }
 input[type=range] {
   -webkit-appearance: none;
-  width: 100%;
+  width: 69%;
   margin: 0px 0;
 }
 input[type=range]:focus {
